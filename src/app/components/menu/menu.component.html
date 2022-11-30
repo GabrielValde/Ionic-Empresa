@@ -1,0 +1,24 @@
+<ion-menu contentId="main-content">
+    <ion-header class="text-left">
+      <ion-toolbar >
+        <ion-img src="./assets/Login/Logo.png" class="h-8 m-0 p-0"></ion-img>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+        <app-button-menu Texto="Semaforo Corporativo" Icono="layers-outline"></app-button-menu>
+        <app-button-menu Texto="Reportes O&M" Icono="briefcase-outline"></app-button-menu>
+        
+        <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
+            <app-group-b-menu></app-group-b-menu>
+
+            <ion-accordion value="second">
+              <ion-item slot="header" color="">
+                <ion-icon name="settings-outline" size="small"></ion-icon>
+                <ion-label class="text-sm px-2 font-sans font-medium">Gestion administrativa</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">Second Content</div>
+            </ion-accordion>  
+          </ion-accordion-group>
+    </ion-content>
+  </ion-menu>
+  

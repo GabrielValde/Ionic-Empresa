@@ -1,3 +1,32 @@
 <ion-content>
-
+<ion-grid class="p-0 m-0">
+  <ion-row class="h-screen flex justify-center m-0 p-0">
+    <ion-col sizeXs="0"  sizeMd="8" class="h-full bg-cover bg-center" style="background: url(./assets/Login/Fondo.jpg); background-size: cover; background-position: center;" >
+      
+    </ion-col>
+    <ion-col sizeXs="8" sizeMd="4" class="flex justify-center" >
+      <section class="mt-10 w-4/5">
+        <div class="w-full flex justify-center text-center my-10">
+        <ion-img src="./assets/Login/Logo.png" class="w-32" ></ion-img>
+        </div>
+        <div class="text-center w-full">
+          <h2 class="font-bold text-sm">Iniciar sesion</h2>
+          <h3 class="text-sm mt-2">Continuar a <span class="font-bold">Jequi</span></h3>
+        </div>
+        
+        
+        <form action="" [formGroup]="Formu" (ngSubmit)="Logear()" class="">
+          <app-textbox Tipo="text" Texto="Correo electronico" Nombre="email" [Formulario]="Formu"></app-textbox>
+          <app-textbox Tipo="password" Texto="Contraseña" Nombre="password" [Formulario]="Formu"></app-textbox>
+                 
+          <ion-button  class="font-bold h-14 p-0" expand="block" shape="round" color="danger"  type="summit">Iniciar sesion</ion-button>
+        </form>
+        <div class="w-full text-center mt-12">
+          <a href="https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwifq6L3nNb7AhXySzABHSdiBT8QPAgI" class="text-blue-900 text-xs">¿Olvidaste tu contraseña?</a>  
+        </div>
+        
+      </section>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
