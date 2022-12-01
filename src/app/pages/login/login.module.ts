@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
-import { MyComponentsModule } from "../../components/my-components/my-components.module";
+import { TextBoxModule } from "../../components/textbox/TextBoxModule.module";
 
 @NgModule({
     declarations: [LoginPage],
@@ -16,8 +16,8 @@ import { MyComponentsModule } from "../../components/my-components/my-components
         FormsModule,
         IonicModule,
         LoginPageRoutingModule,
-        MyComponentsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TextBoxModule
     ]
 })
 export class LoginPageModule {}

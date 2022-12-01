@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ButtonVisibleComponent } from './button-visible.component';
+import { SemaforoPage } from './semaforo.page';
 
-describe('ButtonVisibleComponent', () => {
-  let component: ButtonVisibleComponent;
-  let fixture: ComponentFixture<ButtonVisibleComponent>;
+describe('SemaforoPage', () => {
+  let component: SemaforoPage;
+  let fixture: ComponentFixture<SemaforoPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonVisibleComponent ],
+      declarations: [ SemaforoPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ButtonVisibleComponent);
+    fixture = TestBed.createComponent(SemaforoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -8,8 +8,9 @@ import { MenuService } from 'src/app/services/Menu/menu.service';
   styleUrls: ['./button-menu.component.scss'],
 })
 export class ButtonMenuComponent implements OnInit {
-  @Input() Texto:string="";
-  @Input() Icono:string="";
+  @Input() Text:string="";
+  @Input() Icon:string="";
+  @Input() Link:string="";
   Colapsar:boolean=false;
   constructor(private ColapsarService:MenuService) {   
   }
