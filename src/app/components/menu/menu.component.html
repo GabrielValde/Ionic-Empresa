@@ -1,5 +1,5 @@
-<ion-split-pane contentId="home-content" [ngClass]="{'Colapsar':Colapsar}" class="transition-all" >
-  <ion-menu  contentId="home-content" menuId="home-content" type="overlay" (mouseleave)="Salir()" class="transition-all">
+<ion-split-pane contentId="home-content" [ngClass]="{'Colapsar':Colapsar}" class="transition-all duration-1000" >
+  <ion-menu  contentId="home-content" menuId="home-content" type="overlay" (mouseenter)="Restablecer()" (mouseleave)="Salir()" class="transition-all">
       <ion-content class="ion-padding">
           <ion-list lines="none">
             <ion-list-header class="text-center mt-3 mb-10 flex justify-center">
@@ -8,14 +8,12 @@
                 <ion-img src="./assets/Login/Logo_min.png" class="h-8 m-0 p-0" *ngIf="Colapsar"></ion-img>
               </ion-toolbar>
             </ion-list-header>
-          <app-button-menu Text="Semaforo Corporativo" Icon="layers-outline" ></app-button-menu>
-          <app-button-menu Text="Reportes O&M" Icon="briefcase-outline"></app-button-menu>
+          <app-button-menu *ngFor="let option of Only_Options" [Text]="option.Text" [Icon]="option.Icon" [Link]="option.Url" > 
+          </app-button-menu>
           <hr class="my-7">
-          <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
-              <app-group-b-menu Valor="First" Texto="Reportes administrativos" Icono="speedometer-outline" 
-                  [Items]="Reportes"></app-group-b-menu>
-              <app-group-b-menu Valor="Second" Texto="Gestion administrativa" Icono="settings-outline" 
-                  [Items]="Gestion"></app-group-b-menu>  
+          <ion-accordion-group [multiple]="true" [value]="Valores">
+              <app-group-b-menu *ngFor="let option of AccordeonOptions" [Valor]="option.Value" [Texto]="option.Text" [Icono]="option.Icon" 
+                  [Items]="option.Options"></app-group-b-menu>  
             </ion-accordion-group>
           </ion-list>
       </ion-content>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { OnlyOptions } from 'src/app/interfaces/Menu/only-options';
 import { MenuService } from 'src/app/services/Menu/menu.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { MenuService } from 'src/app/services/Menu/menu.service';
 export class GroupBMenuComponent implements OnInit {
   @Input() Texto:string="";
   @Input() Valor:string="";
-  @Input() Items:string[]=[];
+  @Input() Items:OnlyOptions[]=[];
   @Input() Icono:string="";
   Colapsar:boolean=false;
   constructor(private ColapsarService:MenuService) { 
