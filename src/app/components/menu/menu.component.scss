@@ -1,14 +1,27 @@
 ion-split-pane{
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);;
-    &.colapsar{
-        --side-max-width:74px;
-        --side-min-width:74px;
+    &.Colapsar{
+        --side-max-width:100px;
+        --side-min-width:100px;
         ion-menu{
             --min-width: 74px !important;
             --width: 74px !important;
             max-width: 74px;
             
+            .item{
+                .icon{
+                    width: 100%;
+                }
+                .label{
+                    display: none;
+                }
+            }
         }
 
+    }
+    ion-menu{
+        --min-width:250px;
+        --width:150px;
+        max-width: 300px;
     }
 }

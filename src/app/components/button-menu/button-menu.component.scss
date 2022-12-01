@@ -1,0 +1,11 @@
+ion-item{
+    &.Colapsar{
+        .icon{
+            width: 100%;
+        }
+        .label{
+            display: none;
+        }
+    }
+    
+}

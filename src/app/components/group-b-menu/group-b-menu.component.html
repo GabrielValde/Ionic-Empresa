@@ -1,7 +1,10 @@
-<ion-accordion [value]="Valor" >
-  <ion-item slot="header" color="" class="" lines="none" >
-    <ion-icon [name]="Icono" size="small"></ion-icon>
-    <ion-label class="text-sm px-2 font-sans font-medium py-0" style="font-size: 14px;">{{Texto}}</ion-label>
+<ion-item *ngIf="Colapsar" class="Colapsar item" >
+  <ion-icon [name]="Icono" size="small" class="icon w-full cursor-pointer" (click)="Expandir()"></ion-icon>
+</ion-item>
+<ion-accordion [value]="Valor" [ngClass]="{'Colapsar': Colapsar}"  *ngIf="!Colapsar">
+  <ion-item slot="header" color="" class="item" lines="none" >
+    <ion-icon [name]="Icono" size="small" class="icon"></ion-icon>
+    <ion-label class="text-sm px-2 font-sans font-medium py-0 label" style="font-size: 14px;">{{Texto}}</ion-label>
   </ion-item>
   
   <div *ngFor="let item of Items" class="text-sm bg-gray-100" slot="content">

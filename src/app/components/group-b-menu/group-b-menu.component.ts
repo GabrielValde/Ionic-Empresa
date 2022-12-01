@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/Menu/menu.service';
 
 @Component({
   selector: 'app-group-b-menu',
@@ -10,8 +11,16 @@ export class GroupBMenuComponent implements OnInit {
   @Input() Valor:string="";
   @Input() Items:string[]=[];
   @Input() Icono:string="";
-  constructor() { }
-
-  ngOnInit() {}
-
+  Colapsar:boolean=false;
+  constructor(private ColapsarService:MenuService) { 
+  }
+  Expandir(){
+    this.ColapsarService.NuevoValorColapsar=false;
+  }
+  ngOnInit() {
+    this.ColapsarService.observableColapsar.subscribe(
+      valor=> this.Colapsar=valor 
+    )
+  }
+    
 }

@@ -1,4 +1,4 @@
-<ion-item  class="text-black border-b-0" no-lines>
-  <ion-icon [name]="Icono" size="small"></ion-icon>
-  <ion-label class="px-2 font-sans font-medium text-sm" style="font-size: 14px;">{{Texto}}</ion-label>
+<ion-item  class="text-black border-b-0 item" [ngClass]="{'Colapsar':Colapsar}" no-lines>
+  <ion-icon (click)="Expandir()" [name]="Icono" size="small" class="icon cursor-pointer"></ion-icon>
+  <ion-label class="px-2 font-sans font-medium text-sm label" style="font-size: 14px;">{{Texto}}</ion-label>
 </ion-item>

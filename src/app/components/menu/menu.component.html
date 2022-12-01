@@ -1,10 +1,11 @@
-<ion-split-pane contentId="home-content">
-  <ion-menu  contentId="home-content" menuId="home-content" type="overlay">
+<ion-split-pane contentId="home-content" [ngClass]="{'Colapsar':Colapsar}" class="transition-all" >
+  <ion-menu  contentId="home-content" menuId="home-content" type="overlay" (mouseleave)="Salir()" class="transition-all">
       <ion-content class="ion-padding">
           <ion-list lines="none">
             <ion-list-header class="text-left mt-3 mb-10">
-              <ion-toolbar >
-                <ion-img src="./assets/Login/Logo.png" class="h-8 m-0 p-0"></ion-img>
+              <ion-toolbar class="w-full">
+                <ion-img src="./assets/Login/Logo.png" class="h-8 m-0 p-0 w-full" *ngIf="!Colapsar"></ion-img>
+                <ion-img src="./assets/Login/Logo_min.png" class="h-8 m-0 p-0" *ngIf="Colapsar"></ion-img>
               </ion-toolbar>
             </ion-list-header>
           <app-button-menu Texto="Semaforo Corporativo" Icono="layers-outline" ></app-button-menu>
