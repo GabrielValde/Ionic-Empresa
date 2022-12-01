@@ -1,24 +1,23 @@
-<ion-menu contentId="main-content">
-    <ion-header class="text-left">
-      <ion-toolbar >
-        <ion-img src="./assets/Login/Logo.png" class="h-8 m-0 p-0"></ion-img>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-        <app-button-menu Texto="Semaforo Corporativo" Icono="layers-outline"></app-button-menu>
-        <app-button-menu Texto="Reportes O&M" Icono="briefcase-outline"></app-button-menu>
-        
-        <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
-            <app-group-b-menu></app-group-b-menu>
-
-            <ion-accordion value="second">
-              <ion-item slot="header" color="">
-                <ion-icon name="settings-outline" size="small"></ion-icon>
-                <ion-label class="text-sm px-2 font-sans font-medium">Gestion administrativa</ion-label>
-              </ion-item>
-              <div class="ion-padding" slot="content">Second Content</div>
-            </ion-accordion>  
-          </ion-accordion-group>
-    </ion-content>
-  </ion-menu>
-  
+<ion-split-pane contentId="home-content">
+  <ion-menu  contentId="home-content" menuId="home-content" type="overlay">
+      <ion-content class="ion-padding">
+          <ion-list lines="none">
+            <ion-list-header class="text-left mt-3 mb-10">
+              <ion-toolbar >
+                <ion-img src="./assets/Login/Logo.png" class="h-8 m-0 p-0"></ion-img>
+              </ion-toolbar>
+            </ion-list-header>
+          <app-button-menu Texto="Semaforo Corporativo" Icono="layers-outline" ></app-button-menu>
+          <app-button-menu Texto="Reportes O&M" Icono="briefcase-outline"></app-button-menu>
+          <hr class="my-7">
+          <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
+              <app-group-b-menu Valor="First" Texto="Reportes administrativos" Icono="speedometer-outline" 
+                  [Items]="Reportes"></app-group-b-menu>
+              <app-group-b-menu Valor="Second" Texto="Gestion administrativa" Icono="settings-outline" 
+                  [Items]="Gestion"></app-group-b-menu>  
+            </ion-accordion-group>
+          </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ng-content></ng-content>
+</ion-split-pane>

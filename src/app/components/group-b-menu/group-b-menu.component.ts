@@ -8,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GroupBMenuComponent implements OnInit {
   @Input() Texto:string="";
   @Input() Valor:string="";
-  @Input() Hijos:string[]=[];
+  @Input() Items:string[]=[];
+  @Input() Icono:string="";
   constructor() { }
 
   ngOnInit() {}

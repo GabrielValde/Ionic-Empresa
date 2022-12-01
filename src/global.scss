@@ -29,3 +29,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ion-accordion {
+    .ion-accordion-toggle-icon {
+        font-size: 25px;
+        color: red;
+    }
+}

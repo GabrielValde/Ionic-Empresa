@@ -1,7 +1,14 @@
-<ion-accordion value="first" >
-  <ion-item slot="header" color="">
-    <ion-icon name="speedometer-outline" size="small"></ion-icon>
-    <ion-label class="text-sm px-2 font-sans font-medium">Reportes administrativos</ion-label>
+<ion-accordion [value]="Valor" >
+  <ion-item slot="header" color="" class="" lines="none" >
+    <ion-icon [name]="Icono" size="small"></ion-icon>
+    <ion-label class="text-sm px-2 font-sans font-medium py-0" style="font-size: 14px;">{{Texto}}</ion-label>
   </ion-item>
-  <div class="ion-padding" slot="content">First Content</div>
+  
+  <div *ngFor="let item of Items" class="text-sm bg-gray-100" slot="content">
+    <p class="py-4 pl-11  hover:bg-red-300 hover:text-red-600 hover:font-bold hover:rounded-3xl">
+      {{item}}
+    </p> 
+  </div>
+  
+  
 </ion-accordion>
