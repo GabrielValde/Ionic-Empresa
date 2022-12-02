@@ -31,22 +31,22 @@ export class MenuComponent implements OnInit {
         {
           Text:"Control de desarrolo",
           Icon:"",
-          Url:"/home/development-control"
+          Url:"/home/administrativeReports/development-control"
         },
         {
           Text:"Control de visitas",
           Icon:"",
-          Url:"/home/control-of-visits"
+          Url:"/home/administrativeReports/control-of-visits"
         },
         {
           Text:"Estadisticas de tablas",
           Icon:"",
-          Url:"/home/table-statistics"
+          Url:"/home/administrativeReports/table-statistics"
         },
         {
           Text:"Traduccion de archivos",
           Icon:"",
-          Url:"/home/file-translation"
+          Url:"/home/administrativeReports/file-translation"
         }
       ]
     },
@@ -58,17 +58,17 @@ export class MenuComponent implements OnInit {
         {
           Text:"Usuarios",
           Icon:"",
-          Url:"/home/users"
+          Url:"/home/administrativeManagement/users"
         },
         {
           Text:"Roles",
           Icon:"",
-          Url:"/home/roles"
+          Url:"/home/administrativeManagement/roles"
         },
         {
           Text:"Categorias",
           Icon:"Roles",
-          Url:"/home/categories"
+          Url:"/home/administrativeManagement/categories"
         }
       ]
     }

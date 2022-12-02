@@ -12,7 +12,7 @@ const routes: Routes = [
         loadChildren: () => import('./semaforo/semaforo.module').then( m => m.SemaforoPageModule)
       },
       {
-        path: 'development-control',
+        path: 'administrativeReports/development-control',
         loadChildren: () => import('./development-control/development-control.module').then( m => m.DevelopmentControlPageModule)
       },
       {
@@ -20,27 +20,27 @@ const routes: Routes = [
         loadChildren: () => import('./oym-reports/oym-reports.module').then( m => m.OYMReportsPageModule)
       },
       {
-        path: 'control-of-visits',
+        path: 'administrativeReports/control-of-visits',
         loadChildren: () => import('./control-of-visits/control-of-visits.module').then( m => m.ControlOfVisitsPageModule)
       },
       {
-        path: 'users',
+        path: 'administrativeManagement/users',
         loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
       },
       {
-        path: 'roles',
+        path: 'administrativeManagement/roles',
         loadChildren: () => import('./roles/roles.module').then( m => m.RolesPageModule)
       },
       {
-        path: 'categories',
+        path: 'administrativeManagement/categories',
         loadChildren: () => import('./categories/categories.module').then( m => m.CategoriesPageModule)
       },
       {
-        path: 'table-statistics',
+        path: 'administrativeReports/table-statistics',
         loadChildren: () => import('./table-statistics/table-statistics.module').then( m => m.TableStatisticsPageModule)
       },
       {
-        path: 'file-translation',
+        path: 'administrativeReports/file-translation',
         loadChildren: () => import('./file-translation/file-translation.module').then( m => m.FileTranslationPageModule)
       },
     ]

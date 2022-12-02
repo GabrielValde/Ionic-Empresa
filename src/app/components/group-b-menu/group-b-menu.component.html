@@ -1,15 +1,15 @@
 <ion-item *ngIf="Colapsar" class="Colapsar item " >
-  <ion-icon [name]="Icono" size="small" class="icon w-full" ></ion-icon>
+  <ion-icon [name]="Icono" size="small" class="icon w-full text-black" ></ion-icon>
   <div [title]="Texto" class="absolute w-full h-full cursor-pointer" (click)="Expandir()"></div>
 </ion-item>
 <ion-accordion [value]="Valor" [ngClass]="{'Colapsar': Colapsar}"  *ngIf="!Colapsar" class="text-black transition-all">
   <ion-item slot="header" color="" class="item" lines="none" >
-    <ion-icon [name]="Icono" size="small" class="icon"></ion-icon>
+    <ion-icon [name]="Icono" size="small" class="icon text-black" ></ion-icon>
     <ion-label class="text-sm px-2 font-sans font-medium py-0 label" style="font-size: 14px;">{{Texto}}</ion-label>
   </ion-item>
   
   <div *ngFor="let item of Items" class="text-sm bg-gray-100" slot="content">
-    <p class="py-4 pl-11 cursor-pointer  " 
+    <p class="py-4 pl-11 cursor-pointer" (click)="Seleccionado=true" 
         routerLink="{{item.Url}}" [routerLinkActive]="['bg-red-300','text-red-600','font-bold','rounded-3xl']">
       {{item.Text}}
     </p> 

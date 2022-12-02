@@ -15,7 +15,7 @@
           <app-button-menu [Text]="Only_Options[1].Text" [Icon]="Only_Options[1].Icon" [Link]="Only_Options[1].Url" [TypeStyle]="true">
           </app-button-menu>
           <hr class="my-7">
-          <ion-accordion-group [multiple]="true" [value]="Valores">
+          <ion-accordion-group [multiple]="false" [value]="">
               <app-group-b-menu *ngFor="let option of AccordeonOptions" [Valor]="option.Value" [Texto]="option.Text" [Icono]="option.Icon" 
                   [Items]="option.Options"></app-group-b-menu>  
             </ion-accordion-group>
