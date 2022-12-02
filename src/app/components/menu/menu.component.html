@@ -2,13 +2,17 @@
   <ion-menu  contentId="home-content" menuId="home-content" type="overlay" (mouseenter)="Restablecer()" (mouseleave)="Salir()" class="transition-all">
       <ion-content class="ion-padding">
           <ion-list lines="none">
-            <ion-list-header class="text-center mt-3 mb-10 flex justify-center">
+            <ion-list-header class="text-center mt-3 mb-10 flex justify-center w-full p-0">
               <ion-toolbar class="w-full text-center">
                 <ion-img src="./assets/Login/Logo.png" class="h-8 m-0 p-0 w-full" *ngIf="!Colapsar"></ion-img>
-                <ion-img src="./assets/Login/Logo_min.png" class="h-8 m-0 p-0" *ngIf="Colapsar"></ion-img>
+                <ion-img src="./assets/Login/Logo_min.png" class="h-8 m-0 pl-0.5" *ngIf="Colapsar"></ion-img>
               </ion-toolbar>
             </ion-list-header>
-          <app-button-menu *ngFor="let option of Only_Options" [Text]="option.Text" [Icon]="option.Icon" [Link]="option.Url" > 
+          <!-- <app-button-menu *ngFor="let option of Only_Options" [Text]="option.Text" [Icon]="option.Icon" [Link]="option.Url" > 
+          </app-button-menu> -->
+          <app-button-menu [Text]="Only_Options[0].Text" [Icon]="Only_Options[0].Icon" [Link]="Only_Options[0].Url" [TypeStyle]="false">
+          </app-button-menu>
+          <app-button-menu [Text]="Only_Options[1].Text" [Icon]="Only_Options[1].Icon" [Link]="Only_Options[1].Url" [TypeStyle]="true">
           </app-button-menu>
           <hr class="my-7">
           <ion-accordion-group [multiple]="true" [value]="Valores">

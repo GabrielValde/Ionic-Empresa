@@ -1,6 +1,7 @@
-<div class="item flex" [ngClass]="{'Colapsar':Colapsar}"  >
-  <ion-icon [name]="Icon" size="small" class="icon"></ion-icon>
-  <ion-label class="px-2 font-sans font-medium text-sm label" style="font-size: 14px;">{{Text}}</ion-label>
-  <p [routerLinkActive]="['bg-red-300','text-red-600','font-bold','rounded-3xl']" class="py-5" ></p>
-  <div class="absolute w-full h-full cursor-pointer" (click)="Expandir()" [title]="Text" routerLink="{{Link}}"></div>
+<div class="item flex py-4" [ngClass]="{'Colapsar':Colapsar}" [routerLinkActive]="Estilo" 
+routerLink="{{Link}}">
+  <ion-icon [name]="Icon" size="small" class="icon pl-5"></ion-icon>
+  <ion-label class="px-2 font-sans font-medium text-sm label" style="font-size: 14px;" 
+  [routerLinkActive]="['font-bold']" >{{Text}}</ion-label>
+  <div class="absolute w-full h-full cursor-pointer" (click)="Expandir()" [title]="Text"></div>
 </div>

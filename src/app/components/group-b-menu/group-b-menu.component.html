@@ -9,7 +9,7 @@
   </ion-item>
   
   <div *ngFor="let item of Items" class="text-sm bg-gray-100" slot="content">
-    <p class="py-4 pl-11  " 
+    <p class="py-4 pl-11 cursor-pointer  " 
         routerLink="{{item.Url}}" [routerLinkActive]="['bg-red-300','text-red-600','font-bold','rounded-3xl']">
       {{item.Text}}
     </p> 
