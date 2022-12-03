@@ -34,6 +34,6 @@ Las URL principales son las siguientes:
     - Host/login  
     - Host/home  
 
-La linea del login fue dejada a proposito
+La linea del login que aparece cuando la pantalla es pequeña fue dejada a proposito
 ### Contribuidores
     -- Gabriel Valdez
