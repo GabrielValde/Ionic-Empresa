@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-semaforo',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SemaforoPage implements OnInit {
 
+
   constructor() { }
 
-  ngOnInit() {
+  Sumar(){
+    
   }
+  ngOnInit() {
+    
+    
+  }
+
 
 }

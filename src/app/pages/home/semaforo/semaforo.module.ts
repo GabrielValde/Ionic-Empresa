@@ -5,16 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SemaforoPageRoutingModule } from './semaforo-routing.module';
-
 import { SemaforoPage } from './semaforo.page';
-
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    SemaforoPageRoutingModule
-  ],
-  declarations: [SemaforoPage]
+    declarations: [SemaforoPage],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        SemaforoPageRoutingModule,
+    ]
 })
 export class SemaforoPageModule {}

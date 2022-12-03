@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
-import { TextBoxModule } from "../../components/textbox/TextBoxModule.module";
+import { TextBoxModule } from "../../components/TextBox1/textbox/TextBoxModule.module";
 
 @NgModule({
     declarations: [LoginPage],

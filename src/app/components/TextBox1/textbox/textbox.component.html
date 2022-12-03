@@ -1,0 +1,11 @@
+<div class="my-9" [formGroup]="Formulario">
+  <ion-label position="stacked" class="font-bold text-left text-sm " [ngClass]="Color">{{Texto}}</ion-label>
+  <!-- <input [name]="Nombre" formControlName="{{Nombre}}" [placeholder]="Texto" [type]="Tipo" class="py-1 text-sm border-4 rounded-3xl px-3 my-2 hover:border-red-200 focus:border-red-600 "> -->
+  <div class="relative">
+    <ion-input  (ionBlur)="Color='text-black'" (ionFocus)="Color='text-red-600'" #thisinput [name]="Nombre" formControlName="{{Nombre}}" [placeholder]="Texto" [type]="Tipo" 
+    class="py-1 px-4 text-sm border-4 rounded-3xl my-1 hover:border-red-300 text-left "  ></ion-input>
+    <div class="absolute top-2 right-3 z-50 cursor-pointer" *ngIf="Tipo_o=='password'">
+    <ion-icon [name]="Icono" size="large" (click)="Mostrar(thisinput)" ></ion-icon>
+  </div>
+  </div>
+</div>

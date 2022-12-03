@@ -14,6 +14,7 @@ export class ButtonMenuComponent implements OnInit {
   Estilo:string[]=[];
   @Input() TypeStyle:boolean=false;
   Colapsar:boolean=false;
+  //Componente que sirve para boton en el menu deplegable
   constructor(private ColapsarService:MenuService) {   
   }
   Expandir(){

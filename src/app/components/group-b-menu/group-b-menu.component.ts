@@ -4,6 +4,9 @@ import { MenuService } from 'src/app/services/Menu/menu.service';
 import { Location } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, Observable, Subscription } from 'rxjs';
+/**
+ Este componente aloja un grupo de opciones
+ */
 @Component({
   selector: 'app-group-b-menu',
   templateUrl: './group-b-menu.component.html',

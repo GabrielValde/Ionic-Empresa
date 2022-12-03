@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { BarraMenuComponent } from './barra-menu.component';
+import { TextboxComponent } from './textboxNoForm.component';
 
-describe('BarraMenuComponent', () => {
-  let component: BarraMenuComponent;
-  let fixture: ComponentFixture<BarraMenuComponent>;
+describe('TextboxComponent', () => {
+  let component: TextboxComponent;
+  let fixture: ComponentFixture<TextboxComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BarraMenuComponent ],
+      declarations: [ TextboxComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BarraMenuComponent);
+    fixture = TestBed.createComponent(TextboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
